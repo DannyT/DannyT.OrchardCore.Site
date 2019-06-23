@@ -1,0 +1,36 @@
+/* ==========================================================================
+   #DEFAULTTHEME
+   ========================================================================== */
+
+/**
+ * Default theme for the studio site.
+ */
+
+$themes: map-merge(
+    (
+        'default': (
+            'color': (
+                'background': #343838,
+                'primary': #00b4cc,
+                'text': #adadad
+            ),
+            'fontFamily': (
+                'default': 'Biryani',
+                'heading': 'adelle'
+            ),
+            'fontSize': (
+                'default': 1.9rem,
+                'defaultEM': 1.9em,
+                'heading-primary': 4em,
+                'heading-secondary': 3em
+            ),
+            'fontWeight': (
+                'default': 200
+            ),
+            'lineHeight': (
+                'default': 2.8rem
+            )
+        )
+    ),
+    $themes
+);

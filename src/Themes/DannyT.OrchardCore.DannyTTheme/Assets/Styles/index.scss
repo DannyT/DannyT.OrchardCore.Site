@@ -1,0 +1,32 @@
+/* ==========================================================================
+   #DannyT.OrchardCore.DannyTTheme THEME
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css?family=Biryani:200,400');
+
+@import url('https://use.typekit.net/tqp1npn.css');
+
+@import "settings/all";
+
+@import "settings/themes/default";
+
+@import "tools/all";
+
+/**
+* CSS reset provided by normalize.css 
+* https://necolas.github.io/normalize.css/
+*/
+
+@import "../../node_modules/normalize.css/normalize.css";
+
+@import "generic/box-sizing";
+
+@import "base/body";
+@import "base/heading";
+@import "base/html";
+@import "base/image";
+@import "base/paragraph";
+
+@import "components/heading";
+
+@import "trumps/hidden";
+   

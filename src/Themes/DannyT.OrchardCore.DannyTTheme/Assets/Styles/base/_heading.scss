@@ -1,0 +1,29 @@
+/* ==========================================================================
+   #HEADING
+   ========================================================================== */
+
+/**
+ * Resets `h1`, `h2`, `h3`, etc... in favour of using `.headings`.
+ */
+
+   h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    
+    font-weight: inherit;
+}
+
+h1, h2 {
+  @include rem(margin-bottom, $spacing-large);
+
+  @include themify($themes) {
+      color: themed('color.primary');
+      font-family: themed('fontFamily.heading');
+  }
+  text-shadow: 2px 2px 2px #005f6b;
+}
+
+h1 {
+  @include themify($themes) {
+    font-size: themed('fontSize.heading-primary');
+  }
+}

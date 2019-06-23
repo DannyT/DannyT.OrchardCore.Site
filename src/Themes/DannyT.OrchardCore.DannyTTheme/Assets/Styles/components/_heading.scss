@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #HEADING
+   ========================================================================== */
+
+/**
+ * Default behaviour for a heading.
+ */
+
+ .heading {
+
+    @include rem(margin-bottom, $spacing-large);
+
+    @include themify($themes) {
+        color: themed('color.primary');
+        font-family: themed('fontFamily.heading');
+    }
+    text-shadow: 2px 2px 2px #005f6b;
+}
+
+
+.heading--primary {
+    @include themify($themes) {
+      font-size: themed('fontSize.heading-primary');
+    }
+  }
