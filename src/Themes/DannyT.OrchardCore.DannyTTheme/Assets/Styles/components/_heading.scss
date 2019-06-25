@@ -5,21 +5,43 @@
 /**
  * Default behaviour for a heading.
  */
-
- .heading {
-
-    @include rem(margin-bottom, $spacing-large);
-
-    @include themify($themes) {
-        color: themed('color.primary');
-        font-family: themed('fontFamily.heading');
-    }
-    text-shadow: 2px 2px 2px #005f6b;
+%headingdrop {
+  text-shadow: 2px 2px 2px #005f6b;
 }
 
+.heading {
+  @include themify($themes) {
+      color: themed('color.primary');
+      font-family: themed('fontFamily.heading');
+  }
+}
 
 .heading--primary {
-    @include themify($themes) {
-      font-size: themed('fontSize.heading-primary');
-    }
+  @extend %headingdrop;
+
+  @include rem(margin-bottom, $spacing-large);
+
+  @include themify($themes) {
+    font-size: themed('fontSize.heading-primary');
   }
+}
+
+.heading--secondary {
+  @extend %headingdrop;
+  
+  @include rem(margin-bottom, $spacing-large);
+
+  @include themify($themes) {
+    font-size: themed('fontSize.heading-secondary');
+  }
+}
+
+.heading--third {
+  @extend %headingdrop;
+  
+  @include rem(margin-bottom, $spacing-default);
+
+  @include themify($themes) {
+    font-size: themed('fontSize.heading-third');
+  }
+}

@@ -1,13 +1,14 @@
 /* ==========================================================================
-   #HEADING
+   #PROFILE
    ========================================================================== */
 
-/**
- * Resets `h1`, `h2`, `h3`, etc... in favour of using `.headings`.
- */
+.profile {
+    display: inline-block;
+}
 
-   h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-    
-    font-weight: inherit;
+.profile--circle {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
 }

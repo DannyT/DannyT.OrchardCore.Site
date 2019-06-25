@@ -47,6 +47,6 @@ fractal.web.theme(
     mandelbrot({
         skin: 'black',
         nav: ['docs', 'components'],
-        panels: ['html', 'notes'],
+        panels: ['html', "view", "context", 'notes'],
     })
 );
