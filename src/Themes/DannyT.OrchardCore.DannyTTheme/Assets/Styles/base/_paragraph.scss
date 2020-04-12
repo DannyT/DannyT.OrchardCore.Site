@@ -9,4 +9,9 @@
 p {
     @include rem(margin-bottom, $spacing-default);
     margin-top: 0;
+    text-indent: 1.5em;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 }

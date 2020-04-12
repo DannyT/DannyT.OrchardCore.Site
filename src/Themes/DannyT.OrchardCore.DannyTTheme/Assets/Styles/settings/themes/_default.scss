@@ -10,26 +10,48 @@ $themes: map-merge(
     (
         'default': (
             'color': (
-                'background': #343838,
-                'primary': #00b4cc,
-                'text': #adadad
+                'backgroundDark': #343838,
+                'border': #ccc,
+                'brandPrimary': #00b4cc,
+                'brandSecondary': #929393,
+                'buttonDisabled': #ccc,
+                'hint': #6d6d6d,
+                'tableRowLight': #efefef,
+                'tableRowDark': #070f26,
+                'text': #adadad,
+                'validationError': #e20000,
+                'white': #fff
             ),
             'fontFamily': (
-                'default': 'Biryani',
-                'heading': 'adelle'
+                'default': ('Biryani', sans-serif),
+                'heading': ('adelle','Arial Black')
             ),
             'fontSize': (
-                'default': 1.9rem,
-                'defaultEM': 1.9em,
-                'heading-primary': 4em,
-                'heading-secondary': 3em,
-                'heading-third': 2em
+                'default': 2rem,
+                'defaultEM': 2em,
+                'small': 1.4rem,
+                'hero': 7rem,
+                'h1': 6rem,
+                'h2': 3rem,
+                'h3': 2rem,
+                'h4': 1.8rem,
+                'blockquote': 2rem,
+                'mobile': (
+                    'hero': 3.6rem,
+                    'h1': 3.6rem,
+                    'h2': 3.2rem,
+                    'h3': 2.4rem,
+                    'h4': 1.8rem
+                )
             ),
             'fontWeight': (
-                'default': 200
+                'default': 200,
+                'bold': 700
             ),
             'lineHeight': (
-                'default': 2.8rem
+                'default': 3rem,
+                'heading': 1.2,
+                'hero': 1.4
             )
         )
     ),

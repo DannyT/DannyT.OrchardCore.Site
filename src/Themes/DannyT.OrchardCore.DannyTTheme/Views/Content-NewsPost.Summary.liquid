@@ -1,0 +1,16 @@
+{% assign isPublished = Model.ContentItem.Published %}
+
+<ul class="list list--horizontal list--horizontal-spaced">
+    <li>
+        <p class="margin--bottom display--block">
+            {% if isPublished %}
+                {{ Model.ContentItem.CreatedUtc | local | date: "%d/%m/%Y" }}
+            {% else %}
+                {{ "Draft" | t }}
+            {% endif %}
+        </p>
+    </li>
+    <li>
+        <h2 class="margin--bottom-small"><a href="{{ Model.ContentItem | display_url }}">{{ Model.ContentItem | display_text }}</a></h2>
+    </li>
+</ul>

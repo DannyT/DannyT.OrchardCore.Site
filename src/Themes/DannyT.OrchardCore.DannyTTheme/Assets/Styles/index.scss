@@ -1,9 +1,6 @@
 /* ==========================================================================
    #DannyT.OrchardCore.DannyTTheme THEME
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css?family=Biryani:200,400');
-
-@import url('https://use.typekit.net/tqp1npn.css');
 
 @import "settings/all";
 
@@ -16,18 +13,16 @@
 * https://necolas.github.io/normalize.css/
 */
 
-@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/lightgallery.js/src/sass/lightgallery";
 
-@import "generic/box-sizing";
+@import "generic/all";
 
-@import "base/body";
-@import "base/heading";
-@import "base/html";
-@import "base/image";
-@import "base/paragraph";
+@import "layout/all";
 
-@import "components/heading";
-@import "components/profile";
+@import "base/all";
 
-@import "trumps/hidden";
+@import "components/all";
+
+@import "trumps/all";
    

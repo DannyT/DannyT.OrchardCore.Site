@@ -2,12 +2,34 @@
    #HEADING
    ========================================================================== */
 
-/**
- * Resets `h1`, `h2`, `h3`, etc... in favour of using `.headings`.
- */
+h1, h2, h3, h4, h5, h6 {
+    @include themify($themes) {
+        color: themed('color.brandPrimary');
+    }
+    margin-top: 0;
 
-   h1,h2,h3,h4,h5,h6 {
-    margin: 0;
-    
-    font-weight: inherit;
+    @include text-heading();
+
+    > a {
+        text-decoration: none;
+    }
+}
+
+h1 {
+    @include text-h1();
+    @include themify($themes) {
+        text-shadow: 2px 2px 2px #005f6b;
+    }
+}
+
+h2 {
+    @include text-h2();
+}
+
+h3 {
+    @include text-h3();
+}
+
+h4 {
+    @include text-h4();
 }

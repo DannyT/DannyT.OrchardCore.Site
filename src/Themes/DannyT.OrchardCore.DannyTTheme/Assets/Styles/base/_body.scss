@@ -15,7 +15,7 @@
  */
 body {
     @include themify($themes) {
-        background-color: themed('color.background');
+        background-color: themed('color.backgroundDark');
         color: themed('color.text');
         font-family: themed('fontFamily.default');
         font-size: themed('fontSize.defaultEM'); /* 1. */

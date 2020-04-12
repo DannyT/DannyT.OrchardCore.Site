@@ -1,12 +1,16 @@
 # danny-t.co.uk
 
-My [personal website](https://danny-t.co.uk) built using the [Etch Play flavour](https://github.com/EtchUK/Etch.OrchardCore.SiteBoilerplate) of [Orchard Core](https://github.com/orchardcms/OrchardCore).
+danny-t.co.uk Description
 
 ## Prerequisities
 
 ### [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/)
 
 Orchard Core runs on the .NET Core. Download the latest version from [https://www.microsoft.com/net/download/core](https://www.microsoft.com/net/download/core).
+
+## Orchard Core Reference
+
+This module is referencing the beta 3 build of Orchard Core ([`1.0.0-beta3-71077`](https://www.nuget.org/packages/OrchardCore.Module.Targets/1.0.0-beta3-71077)).
 
 ## Running Locally
 
