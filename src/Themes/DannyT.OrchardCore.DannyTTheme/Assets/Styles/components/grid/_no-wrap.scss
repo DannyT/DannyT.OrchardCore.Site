@@ -1,11 +1,11 @@
 /* ==========================================================================
-   #GRID
+   #GRID/NO-WRAP
    ========================================================================== */
 
-@import "settings";
-@import "default";
-@import "double";
-@import "quad";
+/**
+ * Prevents grid columns from wrapping.
+ */
 
-@import "no-gutter";
-@import "no-wrap";
+ .grid--no-wrap {
+    flex-wrap: nowrap;
+} 

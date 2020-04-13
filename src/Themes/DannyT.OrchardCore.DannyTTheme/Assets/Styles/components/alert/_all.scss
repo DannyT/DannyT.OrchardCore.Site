@@ -1,11 +1,11 @@
 /* ==========================================================================
-   #GRID
+   #ALERT
    ========================================================================== */
 
-@import "settings";
-@import "default";
-@import "double";
-@import "quad";
+   @import "settings";
 
-@import "no-gutter";
-@import "no-wrap";
+   @import "default";
+   
+   @import "error";
+   @import "sticky";
+   @import "success"; 
