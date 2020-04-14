@@ -21,7 +21,7 @@
         padding-top: $list-navigation-anchor-padding-top;
 
         @include themify($themes) {
-            color: themed('color.black');
+            color: themed('color.brandPrimary');
         }
         text-decoration: none;
 

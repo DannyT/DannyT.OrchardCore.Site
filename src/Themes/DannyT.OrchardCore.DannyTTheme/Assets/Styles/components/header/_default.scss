@@ -38,7 +38,13 @@
             }
 
             img {
-                display: block;
+                
+            }
+            
+            h2 {
+                display: inline-block;
+                @include rem(margin-top, .5rem);
+                @include rem(padding, .5rem 1rem);
             }
         }
 

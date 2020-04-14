@@ -44,6 +44,7 @@
         "webpack-fix-style-only-entries": "^0.2.1"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.13.0",
         "core-js": "^3.2.1",
         "lg-video.js": "^1.0.0",
         "lightgallery.js": "^1.1.3",

@@ -13,6 +13,16 @@
         max-width: $content-width-wide + ($hero-title-padding-horizontal * 2);
         position: absolute;
         width: 100%;
+
+        .list {
+            display: inline-block;
+
+            a {
+                @include themify($themes) {
+                    color: themed('color.white');
+                }
+            }
+        }
     }
 
         &__title {
@@ -33,9 +43,20 @@
             }
         }
 
+        &__subtitle {
+        
+            @include themify($themes) {
+                color: themed('color.white');
+            }
+
+            @include text-h2();
+        }
+
         &__btn {
             @include rem(margin-left, $hero-title-padding-horizontal);
         }
+
+        
 
     &__media {
         max-height: $hero-media-max-height;
