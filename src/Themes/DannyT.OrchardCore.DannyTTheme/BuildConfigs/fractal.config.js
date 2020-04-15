@@ -56,5 +56,6 @@ fractal.web.theme(
         skin: 'black',
         nav: ['docs', 'components'],
         panels: ['html', 'notes'],
+        favicon: '../wwwroot/favicon-32x32.png'
     })
 );

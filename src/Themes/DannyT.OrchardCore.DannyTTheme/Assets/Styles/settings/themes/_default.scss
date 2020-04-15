@@ -21,6 +21,7 @@ $themes: map-merge(
                 'black': #070f26,
                 'border': #ccc,
                 'brandPrimary': #00b4cc,
+                'brandPrimaryShadow': #005f6b,
                 'brandSecondary': #929393,
                 'buttonDisabled': #ccc,
                 'grey': #b5b5b5, 
@@ -51,7 +52,8 @@ $themes: map-merge(
                     'h1': 3.6rem,
                     'h2': 3.2rem,
                     'h3': 2.4rem,
-                    'h4': 1.8rem
+                    'h4': 1.8rem,
+                    'title': 2.2rem
                 )
             ),
             'fontWeight': (

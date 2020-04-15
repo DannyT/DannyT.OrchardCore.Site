@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     @include text-h1();
     @include themify($themes) {
-        text-shadow: 2px 2px 2px #005f6b;
+        text-shadow: 2px 2px 2px themed('color.brandPrimaryShadow');
     }
 }
 

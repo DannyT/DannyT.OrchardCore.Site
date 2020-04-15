@@ -20,6 +20,12 @@
             a {
                 @include themify($themes) {
                     color: themed('color.white');
+                    text-shadow: 2px 2px 2px themed('color.backgroundDark');
+                }
+                &:hover {
+                    @include themify($themes) {
+                        color: themed('color.brandPrimary');
+                    }
                 }
             }
         }
@@ -29,24 +35,19 @@
         
             @include themify($themes) {
                 color: themed('color.white');
+                text-shadow: 2px 2px 2px themed('color.backgroundDark');
             }
 
             @include text-hero();
 
-            span {
-                padding: 0 $hero-title-padding-horizontal $hero-title-padding-bottom;
-
-                @include themify($themes) {
-                    background-color: rgba(themed('color.greyLight'), $hero-title-span-opacity);
-                }
-                box-decoration-break: clone;
-            }
+            margin: 0 0;
         }
 
         &__subtitle {
         
             @include themify($themes) {
                 color: themed('color.white');
+                text-shadow: 2px 2px 2px themed('color.backgroundDark');
             }
 
             @include text-h2();

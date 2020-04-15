@@ -36,22 +36,22 @@
             @include bp-min-width($bp-tablet) {
                 @include rem(max-width, $header-logo-width);
             }
+        }
 
-            img {
-                
+        &__title {
+            display: inline-block;
+            @include themify($themes) {
+                @include rem(font-size, themed('fontSize.mobile.title'));
             }
-            
-            h2 {
-                display: inline-block;
-                @include rem(margin-top, .5rem);
-                @include rem(padding, .5rem 1rem);
-            }
+            @include rem(margin, auto);
+            @include rem(padding, 0 1rem);
         }
 
         &__nav-button {
             align-items: center;
             display: flex;
             cursor: pointer;
+            font-size: 1.5rem;
             position: relative;
             z-index: $z-index-front;
         
