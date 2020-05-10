@@ -34,6 +34,8 @@ resource "azurerm_app_service" "as" {
   app_settings = {
     "AzureWebJobsDashboard" = "${azurerm_storage_account.sa.primary_connection_string}"
     "AzureWebJobsStorage"   = "${azurerm_storage_account.sa.primary_connection_string}"
+    "DashboardConnectionString" = "${azurerm_storage_account.sa.primary_connection_string}"
+    "StorageConnectionString"   = "${azurerm_storage_account.sa.primary_connection_string}"
 
     "letsencrypt:ClientId"                     = "${var.le_client_id}"
     "letsencrypt:ClientSecret"                 = "${var.le_client_secret}"
@@ -78,6 +80,10 @@ resource "azurerm_sql_database" "sd" {
   resource_group_name = "${data.azurerm_resource_group.rg.name}"
   location            = "${data.azurerm_resource_group.rg.location}"
   server_name         = "${var.sql_server_name}"
+
+  edition                          = "Standard"
+  requested_service_objective_name = "${var.sql_elastic_pool != "" ? "ElasticPool" : "S0"}"
+  elastic_pool_name                = "${var.sql_elastic_pool}"
 }
 
 resource "azurerm_app_service_custom_hostname_binding" "hostnames" {
@@ -85,6 +91,13 @@ resource "azurerm_app_service_custom_hostname_binding" "hostnames" {
   hostname            = "${var.hostnames[count.index]}"
   app_service_name    = "${azurerm_app_service.as.name}"
   resource_group_name = "${data.azurerm_resource_group.rg.name}"
+
+  lifecycle {
+    ignore_changes = [
+      ssl_state,
+      thumbprint
+    ]
+  }
 }
 
 resource "azurerm_cdn_profile" "cp" {

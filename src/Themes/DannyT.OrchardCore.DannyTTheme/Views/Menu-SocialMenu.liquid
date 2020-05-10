@@ -1,0 +1,5 @@
+<ul class="list list--horizontal list--horizontal-spaced">
+    {% for item in Model.Items %}
+        {{ item | shape_render }}
+    {% endfor %}
+</ul>

@@ -116,7 +116,7 @@
         {
             "name": "Themes",
             "Site": "DannyT.OrchardCore.DannyTTheme",
-            "Admin": "TheAdmin"
+            "Admin": "Etch.OrchardCore.AdminTheme"
         },
         {
             "name": "ContentDefinition",
@@ -312,7 +312,311 @@
                             }
                         }
                     ]
-                }
+                },
+                {
+                    "Name": "Hero",
+                    "DisplayName": "Hero",
+                    "Settings": {
+                      "ContentTypeSettings": {
+                        "Creatable": false,
+                        "Draftable": false,
+                        "Versionable": false,
+                        "Listable": false,
+                        "Securable": false,
+                        "Stereotype": "Widget"
+                      }
+                    },
+                    "ContentTypePartDefinitionRecords": [
+                      {
+                        "PartName": "Hero",
+                        "Name": "Hero",
+                        "Settings": {
+                          "ContentTypePartSettings": {
+                            "Position": "0"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "Banner",
+                    "DisplayName": "Banner",
+                    "Settings": {
+                      "ContentTypeSettings": {
+                        "Stereotype": "Widget"
+                      },
+                      "FullTextAspectSettings": {}
+                    },
+                    "ContentTypePartDefinitionRecords": [
+                      {
+                        "PartName": "Banner",
+                        "Name": "Banner",
+                        "Settings": {
+                          "ContentTypePartSettings": {
+                            "Position": "0"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "SocialMenuItem",
+                    "DisplayName": "Social Menu Item",
+                    "Settings": {
+                      "ContentTypeSettings": {
+                        "Stereotype": "MenuItem"
+                      },
+                      "FullTextAspectSettings": {
+                        "IncludeBodyAspect": false,
+                        "IncludeDisplayText": false
+                      }
+                    },
+                    "ContentTypePartDefinitionRecords": [
+                      {
+                        "PartName": "SocialMenuItem",
+                        "Name": "SocialMenuItem",
+                        "Settings": {
+                          "ContentTypePartSettings": {
+                            "Position": "0"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "Hero",
+                    "Settings": {},
+                    "ContentPartFieldDefinitionRecords": [
+                      {
+                        "FieldName": "TextField",
+                        "Name": "BackgroundType",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Background Type",
+                            "Editor": "PredefinedList"
+                          },
+                          "TextFieldSettings": {
+                            "Hint": "Whether the background should be an image or a video embed."
+                          },
+                          "TextFieldPredefinedListEditorSettings": {
+                            "Options": [
+                              {
+                                "name": "Image",
+                                "value": "image"
+                              },
+                              {
+                                "name": "Video Embed",
+                                "value": "embed"
+                              }
+                            ],
+                            "Editor": 0,
+                            "DefaultValue": "image"
+                          },
+                          "ContentIndexSettings": {}
+                        }
+                      },
+                      {
+                        "FieldName": "ResponsiveMediaField",
+                        "Name": "BackgroundImage",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Background Image"
+                          },
+                          "ResponsiveMediaFieldSettings": {
+                            "Breakpoints": "375, 425, 600, 768, 1024, 1280, 1440, 1920, 2560",
+                            "Hint": "Image displayed as background of hero.",
+                            "Required": false
+                          },
+                          "ContentIndexSettings": {}
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "BackgroundEmbed",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Background Embed Url"
+                          },
+                          "TextFieldSettings": {
+                            "Hint": "URL to third-party site that is hosting video (e.g. YouTube)."
+                          },
+                          "ContentIndexSettings": {}
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "DisplayText",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Display Text"
+                          }
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "CTALabel",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "CTA Label"
+                          },
+                          "TextFieldSettings": {
+                            "Hint": "Text displayed on call to action link."
+                          },
+                          "ContentIndexSettings": {}
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "CTAUrl",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "CTA Url"
+                          },
+                          "TextFieldSettings": {
+                            "Hint": "Page user is navigated to when selecting call to action link."
+                          },
+                          "ContentIndexSettings": {}
+                        }
+                      },
+                      {
+                        "FieldName": "ContentPickerField",
+                        "Name": "SocialMenu",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Social Menu"
+                          },
+                          "ContentPickerFieldSettings": {
+                            "DisplayedContentTypes": [
+                              "Menu"
+                            ]
+                          },
+                          "ContentIndexSettings": {}
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "Banner",
+                    "Settings": {},
+                    "ContentPartFieldDefinitionRecords": [
+                      {
+                        "FieldName": "ContentPickerField",
+                        "Name": "Menu",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Menu",
+                            "Position": "1"
+                          },
+                          "ContentPickerFieldSettings": {
+                            "Hint": "Main menu used by users to navigate the main sections of the site.",
+                            "DisplayedContentTypes": [
+                              "Menu"
+                            ]
+                          },
+                          "ContentIndexSettings": {}
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "MenuToggleButtonLabel",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Menu Toggle Button Label",
+                            "Position": "2"
+                          },
+                          "TextFieldSettings": {
+                            "Hint": "Label for button that's displayed on smaller devices to toggle the visibility of the main menu."
+                          },
+                          "ContentIndexSettings": {}
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "SiteName",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Site Name",
+                            "Position": "0"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "Name": "SocialMenuItem",
+                    "Settings": {},
+                    "ContentPartFieldDefinitionRecords": [
+                      {
+                        "FieldName": "TextField",
+                        "Name": "Platform",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Platform",
+                            "Editor": "PredefinedList",
+                            "Position": "0"
+                          },
+                          "TextFieldSettings": {},
+                          "ContentIndexSettings": {},
+                          "TextFieldPredefinedListEditorSettings": {
+                            "Options": [
+                              {
+                                "name": "Twitter",
+                                "value": "twitter"
+                              },
+                              {
+                                "name": "LinkedIn",
+                                "value": "linkedin"
+                              },
+                              {
+                                "name": "Github",
+                                "value": "github"
+                              },
+                              {
+                                "name": "Instagram",
+                                "value": "instagram"
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "Label",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Label",
+                            "Position": "2"
+                          }
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "Url",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Url",
+                            "Editor": "Url",
+                            "Position": "3"
+                          },
+                          "TextFieldSettings": {},
+                          "ContentIndexSettings": {}
+                        }
+                      },
+                      {
+                        "FieldName": "TextField",
+                        "Name": "Icon",
+                        "Settings": {
+                          "ContentPartFieldSettings": {
+                            "DisplayName": "Icon",
+                            "Editor": "IconPicker",
+                            "Position": "1"
+                          },
+                          "TextFieldSettings": {},
+                          "ContentIndexSettings": {}
+                        }
+                      }
+                    ]
+                  }
             ],
             "ContentParts": [
                 {
@@ -567,221 +871,213 @@
                 },
                 {
                     "ContentItemId": "4j2bj7ydh9n4xrhpen3xx7wxx5",
-                    "ContentItemVersionId": "43rhs89eshvjb5z0w8b5jhja4p",
+                    "ContentItemVersionId": "406zk5c880erxzj5nge7zp4t56",
                     "ContentType": "Homepage",
                     "DisplayText": "Home",
                     "Latest": true,
                     "Published": true,
-                    "ModifiedUtc": "[js: variables('now')]",
-                    "PublishedUtc": "[js: variables('now')]",
-                    "CreatedUtc": "[js: variables('now')]",
-                    "Owner": "[js: parameters('AdminUsername')]",
-                    "Author": "[js: parameters('AdminUsername')]",
+                    "ModifiedUtc": "2020-05-10T02:53:07.4332646Z",
+                    "PublishedUtc": "2020-05-10T02:53:07.4712194Z",
+                    "CreatedUtc": "2020-04-13T00:59:13.941Z",
+                    "Owner": "dan.thomas@etchuk.com",
+                    "Author": "dan.thomas@etchuk.com",
                     "Homepage": {},
                     "AutoroutePart": {
-                        "Path": "home",
-                        "SetHomepage": true
+                      "Path": "home",
+                      "SetHomepage": true
                     },
                     "CommonPart": {},
                     "TitlePart": {
-                        "Title": "Home"
+                      "Title": "Home"
                     },
                     "Content": {
-                        "ContentItems": [
-                            {
-                                "ContentItemId": "4tddztb3x6pm0twbwbb0cwz95j",
-                                "ContentItemVersionId": null,
-                                "ContentType": "Hero",
-                                "DisplayText": null,
-                                "Latest": false,
-                                "Published": false,
-                                "ModifiedUtc": "[js: variables('now')]",
-                                "PublishedUtc": null,
-                                "CreatedUtc": null,
-                                "Owner": null,
-                                "Author": "[js: parameters('AdminUsername')]",
-                                "Hero": {
-                                    "BackgroundImage": {
-                                        "Data": "[]"
-                                    },
-                                    "DisplayText": {
-                                        "Text": "Etch Play Boilerplate"
-                                    },
-                                    "CTALabel": {
-                                        "Text": "Learn more"
-                                    },
-                                    "CTAUrl": {
-                                        "Text": "#"
-                                    },
-                                    "BackgroundType": {
-                                        "Text": "embed"
-                                    },
-                                    "BackgroundEmbed": {
-                                        "Text": "https://player.vimeo.com/video/165642889?background=1"
-                                    }
-                                }
+                      "ContentItems": [
+                        {
+                          "ContentItemId": "4jf07zc3s7gpfwqt0798kdx85m",
+                          "ContentItemVersionId": null,
+                          "ContentType": "Hero",
+                          "DisplayText": null,
+                          "Latest": false,
+                          "Published": false,
+                          "ModifiedUtc": "2020-05-10T02:53:07.4406676Z",
+                          "PublishedUtc": null,
+                          "CreatedUtc": null,
+                          "Owner": null,
+                          "Author": "dan.thomas@etchuk.com",
+                          "Hero": {
+                            "BackgroundType": {
+                              "Text": "image"
                             },
-                            {
-                                "ContentItemId": "46fx9y0627e2fwqcfkekg5wqxx",
-                                "ContentItemVersionId": null,
-                                "ContentType": "Section",
-                                "DisplayText": "Intro",
-                                "Latest": false,
-                                "Published": false,
-                                "ModifiedUtc": "[js: variables('now')]",
-                                "PublishedUtc": null,
-                                "CreatedUtc": null,
-                                "Owner": null,
-                                "Author": "[js: parameters('AdminUsername')]",
-                                "Section": {
-                                    "BackgroundColour": {
-                                        "Text": "default"
-                                    },
-                                    "Alignment": {
-                                        "Text": "default"
-                                    }
-                                },
-                                "Children": {
-                                    "ContentItems": [
-                                        {
-                                            "ContentItemId": "4fdk5pa4cvjnx69r3t3sd47fm3",
-                                            "ContentItemVersionId": null,
-                                            "ContentType": "Card",
-                                            "DisplayText": "This is a heading (h2)",
-                                            "Latest": false,
-                                            "Published": false,
-                                            "ModifiedUtc": "[js: variables('now')]",
-                                            "PublishedUtc": null,
-                                            "CreatedUtc": null,
-                                            "Owner": null,
-                                            "Author": "[js: parameters('AdminUsername')]",
-                                            "Card": {
-                                                "Image": {
-                                                    "Paths": []
-                                                },
-                                                "CTALabel": {
-                                                    "Text": "Brand Primary"
-                                                },
-                                                "CTAUrl": {
-                                                    "Text": "#"
-                                                },
-                                                "ImageAlternateText": {
-                                                    "Text": null
-                                                }
-                                            },
-                                            "TitlePart": {
-                                                "Title": "This is a heading (h2)"
-                                            },
-                                            "Body": {
-                                                "ContentItems": [
-                                                    {
-                                                        "ContentItemId": "4gtzbfchn1h03wtna5nbabybx4",
-                                                        "ContentItemVersionId": null,
-                                                        "ContentType": "Paragraph",
-                                                        "DisplayText": null,
-                                                        "Latest": false,
-                                                        "Published": false,
-                                                        "ModifiedUtc": "[js: variables('now')]",
-                                                        "PublishedUtc": null,
-                                                        "CreatedUtc": null,
-                                                        "Owner": null,
-                                                        "Author": "[js: parameters('AdminUsername')]",
-                                                        "Paragraph": {
-                                                            "Text": {
-                                                                "Text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed orci eget dui hendrerit rhoncus ut ut purus. Aenean sodales libero vitae enim vestibulum maximus."
-                                                            }
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                "TitlePart": {
-                                    "Title": "Intro"
-                                }
+                            "BackgroundImage": {
+                              "Data": "[{\"sources\":[{\"breakpoint\":1024,\"path\":\"Photos/Mountains/snow1-1024.jpg\"},{\"breakpoint\":2560,\"path\":\"Photos/Mountains/snow1-2560.jpg\"},{\"breakpoint\":1280,\"path\":\"Photos/Mountains/snow1-1280.jpg\"},{\"breakpoint\":1440,\"path\":\"Photos/Mountains/snow1-1440.jpg\"},{\"breakpoint\":1920,\"path\":\"Photos/Mountains/snow1-1920.jpg\"},{\"breakpoint\":375,\"path\":\"Photos/Mountains/snow1-375.jpg\"},{\"breakpoint\":425,\"path\":\"Photos/Mountains/snow1-425.jpg\"},{\"breakpoint\":600,\"path\":\"Photos/Mountains/snow1-768.jpg\"},{\"breakpoint\":768,\"path\":\"Photos/Mountains/snow1-768.jpg\"}]}]",
+                              "HasData": true
                             },
-                            {
-                                "ContentItemId": "4bjwm7hxv81rp46fnsw6trmrm5",
-                                "ContentItemVersionId": null,
-                                "ContentType": "Section",
-                                "DisplayText": "Alternate Section",
-                                "Latest": false,
-                                "Published": false,
-                                "ModifiedUtc": "[js: variables('now')]",
-                                "PublishedUtc": null,
-                                "CreatedUtc": null,
-                                "Owner": null,
-                                "Author": "[js: parameters('AdminUsername')]",
-                                "Section": {
-                                    "BackgroundColour": {
-                                        "Text": "grey"
-                                    },
-                                    "Alignment": {
-                                        "Text": "default"
-                                    }
-                                },
-                                "Children": {
-                                    "ContentItems": [
-                                        {
-                                            "ContentItemId": "4eh60k8ym9thxtgkzsjvr0mv4x",
-                                            "ContentItemVersionId": null,
-                                            "ContentType": "Card",
-                                            "DisplayText": "This is a heading (h2)",
-                                            "Latest": false,
-                                            "Published": false,
-                                            "ModifiedUtc": "[js: variables('now')]",
-                                            "PublishedUtc": null,
-                                            "CreatedUtc": null,
-                                            "Owner": null,
-                                            "Author": "[js: parameters('AdminUsername')]",
-                                            "Card": {
-                                                "Image": {
-                                                    "Paths": []
-                                                },
-                                                "CTALabel": {
-                                                    "Text": "Learn more"
-                                                },
-                                                "CTAUrl": {
-                                                    "Text": "#"
-                                                },
-                                                "ImageAlternateText": {
-                                                    "Text": null
-                                                }
-                                            },
-                                            "TitlePart": {
-                                                "Title": "This is a heading (h2)"
-                                            },
-                                            "Body": {
-                                                "ContentItems": [
-                                                    {
-                                                        "ContentItemId": "4r1r1k2exyv95tz4dk3tz1mj4t",
-                                                        "ContentItemVersionId": null,
-                                                        "ContentType": "Paragraph",
-                                                        "DisplayText": null,
-                                                        "Latest": false,
-                                                        "Published": false,
-                                                        "ModifiedUtc": "[js: variables('now')]Z",
-                                                        "PublishedUtc": null,
-                                                        "CreatedUtc": null,
-                                                        "Owner": null,
-                                                        "Author": "[js: parameters('AdminUsername')]",
-                                                        "Paragraph": {
-                                                            "Text": {
-                                                                "Text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed orci eget dui hendrerit rhoncus ut ut purus. Aenean sodales libero vitae enim vestibulum maximus."
-                                                            }
-                                                        }
-                                                    }
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                "TitlePart": {
-                                    "Title": "Alternate Section"
-                                }
+                            "BackgroundEmbed": {
+                              "Text": null
+                            },
+                            "DisplayText": {
+                              "Text": "Digital strategy for the video games industry"
+                            },
+                            "CTALabel": {
+                              "Text": null
+                            },
+                            "CTAUrl": {
+                              "Text": null
+                            },
+                            "SocialMenu": {
+                              "ContentItemIds": [
+                                "47xnaw52pcjqc368qhv4n65pn1"
+                              ]
                             }
-                        ]
+                          }
+                        },
+                        {
+                          "ContentItemId": "42vn1enp7zzeks9qj4c2byszm8",
+                          "ContentItemVersionId": null,
+                          "ContentType": "Section",
+                          "DisplayText": "Intro",
+                          "Latest": false,
+                          "Published": false,
+                          "ModifiedUtc": "2020-05-10T02:53:07.4497037Z",
+                          "PublishedUtc": null,
+                          "CreatedUtc": null,
+                          "Owner": null,
+                          "Author": "dan.thomas@etchuk.com",
+                          "Section": {
+                            "BackgroundColour": {
+                              "Text": "default"
+                            },
+                            "Alignment": {
+                              "Text": "default"
+                            }
+                          },
+                          "Children": {
+                            "ContentItems": [
+                              {
+                                "ContentItemId": "40gazfazg2av6t6vpy68w7a849",
+                                "ContentItemVersionId": null,
+                                "ContentType": "Card",
+                                "DisplayText": "This is a heading (h2)",
+                                "Latest": false,
+                                "Published": false,
+                                "ModifiedUtc": "2020-05-10T02:53:07.4519109Z",
+                                "PublishedUtc": null,
+                                "CreatedUtc": null,
+                                "Owner": null,
+                                "Author": "dan.thomas@etchuk.com",
+                                "Card": {
+                                  "Image": {
+                                    "Paths": []
+                                  },
+                                  "ImageAlternateText": {
+                                    "Text": null
+                                  },
+                                  "CTALabel": {
+                                    "Text": "Brand Primary"
+                                  },
+                                  "CTAUrl": {
+                                    "Text": "#"
+                                  }
+                                },
+                                "TitlePart": {
+                                  "Title": "This is a heading (h2)"
+                                },
+                                "Body": {
+                                  "ContentItems": [
+                                    {
+                                      "ContentItemId": "4rqdh4mkxmne0y5ef2szm5qwwh",
+                                      "ContentItemVersionId": null,
+                                      "ContentType": "Paragraph",
+                                      "DisplayText": null,
+                                      "Latest": false,
+                                      "Published": false,
+                                      "ModifiedUtc": "2020-05-10T02:53:07.4553821Z",
+                                      "PublishedUtc": null,
+                                      "CreatedUtc": null,
+                                      "Owner": null,
+                                      "Author": "dan.thomas@etchuk.com",
+                                      "Paragraph": {
+                                        "Text": {
+                                          "Text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed orci eget dui hendrerit rhoncus ut ut purus. Aenean sodales libero vitae enim vestibulum maximus."
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              }
+                            ]
+                          },
+                          "TitlePart": {
+                            "Title": "Intro"
+                          }
+                        },
+                        {
+                          "ContentItemId": "4g9r9gqps2k4pz1xjm42hgqsms",
+                          "ContentItemVersionId": null,
+                          "ContentType": "Section",
+                          "DisplayText": "Alternate Section",
+                          "Latest": false,
+                          "Published": false,
+                          "ModifiedUtc": "2020-05-10T02:53:07.4602069Z",
+                          "PublishedUtc": null,
+                          "CreatedUtc": null,
+                          "Owner": null,
+                          "Author": "dan.thomas@etchuk.com",
+                          "Section": {
+                            "BackgroundColour": {
+                              "Text": "grey"
+                            },
+                            "Alignment": {
+                              "Text": "default"
+                            }
+                          },
+                          "Children": {
+                            "ContentItems": [
+                              {
+                                "ContentItemId": "4rq7vh8mmkb3ft09bmp8exd4nt",
+                                "ContentItemVersionId": null,
+                                "ContentType": "Card",
+                                "DisplayText": "This is a heading (h2)",
+                                "Latest": false,
+                                "Published": false,
+                                "ModifiedUtc": "2020-05-10T02:53:07.4623303Z",
+                                "PublishedUtc": null,
+                                "CreatedUtc": null,
+                                "Owner": null,
+                                "Author": "dan.thomas@etchuk.com",
+                                "Card": {
+                                  "Image": {
+                                    "Paths": []
+                                  },
+                                  "ImageAlternateText": {
+                                    "Text": null
+                                  },
+                                  "CTALabel": {
+                                    "Text": "Learn more"
+                                  },
+                                  "CTAUrl": {
+                                    "Text": "#"
+                                  }
+                                },
+                                "TitlePart": {
+                                  "Title": "This is a heading (h2)"
+                                },
+                                "Body": {
+                                  "ContentItems": []
+                                }
+                              }
+                            ]
+                          },
+                          "TitlePart": {
+                            "Title": "Alternate Section"
+                          }
+                        }
+                      ]
+                    },
+                    "MetaTagsPart": {
+                      "Description": null,
+                      "Images": [],
+                      "Title": null
                     }
                 },
                 {
@@ -948,6 +1244,165 @@
                         "MenuItemsListPart": {
                             "Position": "4"
                         }
+                    }
+                },
+                {
+                    "ContentItemId": "4jvc196r6kq353ktv4v87rm1m8",
+                    "ContentItemVersionId": "4abddekff9c3648fz94165mqxy",
+                    "ContentType": "ContextualEditControl",
+                    "DisplayText": "Edit Button",
+                    "Latest": true,
+                    "Published": true,
+                    "ModifiedUtc": "2020-05-10T19:13:31.0899572Z",
+                    "PublishedUtc": "2020-05-10T19:13:31.163268Z",
+                    "CreatedUtc": "2020-05-10T19:13:31.163268Z",
+                    "Owner": "dan.thomas@etchuk.com",
+                    "Author": "dan.thomas@etchuk.com",
+                    "ContextualEditPart": {},
+                    "LayerMetadata": {
+                      "Position": 1.0,
+                      "Zone": "Footer",
+                      "Layer": "Default"
+                    }
+                  },
+                  {
+                    "ContentItemId": "47xnaw52pcjqc368qhv4n65pn1",
+                    "ContentItemVersionId": "47msnkkfk2w6854fd4c096zyc9",
+                    "ContentType": "Menu",
+                    "DisplayText": "Social Menu",
+                    "Latest": true,
+                    "Published": true,
+                    "ModifiedUtc": "2020-05-10T02:19:51.188576Z",
+                    "PublishedUtc": "2020-05-10T19:56:36.8580234Z",
+                    "CreatedUtc": "2020-05-10T01:50:52.4263872Z",
+                    "Owner": "dan.thomas@etchuk.com",
+                    "Author": null,
+                    "TitlePart": {
+                      "Title": "Social Menu"
+                    },
+                    "AliasPart": {
+                      "Alias": "social-menu"
+                    },
+                    "MenuPart": {},
+                    "MenuItemsListPart": {
+                      "MenuItems": [
+                        {
+                          "ContentItemId": "4v1vkwrkn1y0gve159pknxxzmy",
+                          "ContentItemVersionId": null,
+                          "ContentType": "SocialMenuItem",
+                          "DisplayText": null,
+                          "Latest": false,
+                          "Published": false,
+                          "ModifiedUtc": "2020-05-10T02:19:51.1888965Z",
+                          "PublishedUtc": null,
+                          "CreatedUtc": null,
+                          "Owner": null,
+                          "Author": "dan.thomas@etchuk.com",
+                          "SocialMenuItem": {
+                            "Platform": {
+                              "Text": "twitter"
+                            },
+                            "Label": {
+                              "Text": "@DannyT"
+                            },
+                            "Url": {
+                              "Text": "https://twitter.com/dannyt"
+                            },
+                            "Icon": {
+                              "Text": "fab fa-twitter"
+                            }
+                          }
+                        },
+                        {
+                          "ContentItemId": "49gtm8bhtas7jvq9xx7z5eaxd5",
+                          "ContentItemVersionId": null,
+                          "ContentType": "SocialMenuItem",
+                          "DisplayText": null,
+                          "Latest": false,
+                          "Published": false,
+                          "ModifiedUtc": "2020-05-10T02:29:09.1331893Z",
+                          "PublishedUtc": null,
+                          "CreatedUtc": null,
+                          "Owner": null,
+                          "Author": "dan.thomas@etchuk.com",
+                          "SocialMenuItem": {
+                            "Platform": {
+                              "Text": "linkedin"
+                            },
+                            "Label": {
+                              "Text": "danmoov2"
+                            },
+                            "Url": {
+                              "Text": "https://www.linkedin.com/in/danmoov2/"
+                            },
+                            "Icon": {
+                              "Text": "fab fa-linkedin"
+                            }
+                          }
+                        },
+                        {
+                          "ContentItemId": "4gs2f008gw6wd6d3t616ek8s5j",
+                          "ContentItemVersionId": null,
+                          "ContentType": "SocialMenuItem",
+                          "DisplayText": null,
+                          "Latest": false,
+                          "Published": false,
+                          "ModifiedUtc": "2020-05-10T02:30:38.3994416Z",
+                          "PublishedUtc": null,
+                          "CreatedUtc": null,
+                          "Owner": null,
+                          "Author": "dan.thomas@etchuk.com",
+                          "SocialMenuItem": {
+                            "Platform": {
+                              "Text": "github"
+                            },
+                            "Label": {
+                              "Text": "DannyT"
+                            },
+                            "Url": {
+                              "Text": "https://github.com/dannyt"
+                            },
+                            "Icon": {
+                              "Text": "fab fa-github"
+                            }
+                          }
+                        },
+                        {
+                          "ContentItemId": "402129e7s4g9719qb971qtgjxw",
+                          "ContentItemVersionId": null,
+                          "ContentType": "SocialMenuItem",
+                          "DisplayText": null,
+                          "Latest": false,
+                          "Published": false,
+                          "ModifiedUtc": "2020-05-10T02:31:50.3298892Z",
+                          "PublishedUtc": null,
+                          "CreatedUtc": null,
+                          "Owner": null,
+                          "Author": "dan.thomas@etchuk.com",
+                          "SocialMenuItem": {
+                            "Platform": {
+                              "Text": "instagram"
+                            },
+                            "Label": {
+                              "Text": "danmoov2"
+                            },
+                            "Url": {
+                              "Text": "https://www.instagram.com/danmoov2/"
+                            },
+                            "Icon": {
+                              "Text": "fab fa-instagram"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "@WeldedPartSettings": {
+                      "MenuPart": {
+                        "Position": "3"
+                      },
+                      "MenuItemsListPart": {
+                        "Position": "4"
+                      }
                     }
                 }
             ]

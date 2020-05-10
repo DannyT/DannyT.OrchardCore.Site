@@ -1,0 +1,3 @@
+﻿{% assign link = Model.ContentItem.Content.SocialMenuItem %}
+
+<a href="{{ link.Url.Text }}" rel="noopener" target="_blank"><i class="{{ link.Icon.Text }}"></i><span class="hidden">{{ link.Label.Text }}</span> </a>

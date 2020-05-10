@@ -1,12 +1,8 @@
 /* ==========================================================================
-   #SECTION
+   #SECTION/VARIABLES
    ========================================================================== */
 
-@import "variables";
-@import "default";
+$section-vertical-padding-mobile: 6rem;
+$section-vertical-padding: 9rem;
 
-@import "alignment";
-@import "feature";
-@import "form-solo";
-@import "hero";
-@import "width";
+$section-form-solo-max-width: 40rem;

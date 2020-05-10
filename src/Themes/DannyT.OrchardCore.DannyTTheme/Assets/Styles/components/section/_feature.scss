@@ -1,0 +1,46 @@
+/* ==========================================================================
+   #SECTION/FEATURE
+   ========================================================================== */
+
+.section--feature {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 0;
+    padding-top: 0;
+
+    .section {
+        &__content {
+            position: absolute;
+            z-index: $z-index-default;
+
+            @include themify($themes) {
+                color: themed('color.white');
+            }
+
+            p {
+                @include rem(margin-bottom, $content-gutter);
+            }
+        }
+
+            &__title {
+                @include text-h1;
+                @include rem(margin-bottom, $content-gutter-small);
+            }
+
+        &__media {
+            position: relative;
+
+            &:after {
+                content: "";
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                width: 100%;
+
+                background: radial-gradient(circle, rgba(0,0,0,.4) 0%, rgba(0,0,0,0) 50%);
+            }
+        }
+    }
+}

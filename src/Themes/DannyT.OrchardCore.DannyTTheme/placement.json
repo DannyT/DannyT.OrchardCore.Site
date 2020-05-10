@@ -1,8 +1,15 @@
 {
-    "TitlePart": [
-        {
-            "contentType": ["Homepage"],
-            "place": "-"
-        }
-    ]
+  "TitlePart": [
+    {
+      "contentType": [ "Homepage" ],
+      "place": "-"
+    }
+  ],
+  "ContentPickerField": [
+    {
+      "contentType": [ "Hero" ],
+      "place": "-"
+    }
+  ]
+
 }
